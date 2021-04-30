@@ -315,12 +315,45 @@ button.btn-default {
 // === and btn ========================================================================
 
 .input {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	border: 1.5px solid #EBEAED;
+	border-radius: 100px;
+	padding: 10px 24px;
+	background-color: transparent;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 26px;
+	color: #EBEAED;
+	min-height: 57px;
+
+	&::placeholder {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 26px;
+		color: #EBEAED;
+	}
 }
 
 .textarea {
-}
+	width: 100%;
+	border: 1.5px solid #EBEAED;
+	border-radius: 25px;
+	padding: 10px 24px;
+	background-color: transparent;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 26px;
+	color: #EBEAED;
+	resize: none;
 
-.link {
+	&::placeholder {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 26px;
+		color: #EBEAED;
+	}
 }
 
 .box {
@@ -388,6 +421,7 @@ button.btn-default {
 @import "../common/footer/#footer";
 @import "../common/social-list/social-list";
 @import "../common/modules/modules";
+@import "../common/FAQ/FAQ";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================

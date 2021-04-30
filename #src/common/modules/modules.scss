@@ -4,6 +4,7 @@
 
     @media (max-width: $md2+px) {
         padding-top: 41px;
+        margin-bottom: 53px;
     }
 
     &__body {
@@ -110,6 +111,29 @@
 
     &__card-link {
         font-weight: 700;
+        @media (max-width: $md2+px) {
+            margin-bottom: 15px;
+            text-decoration: underline;
+            position: relative;
+            &:before {
+                font-family: 'icomoon';
+                position: absolute;
+                content: "\e900";
+                top: 0;
+                font-weight: 400;
+                left: -20px;
+                color: inherit;
+                font-size: 0.8em;
+            }
+
+            & + p {
+                display: none;
+
+                & + .modules__card-btn {
+                    display: none;
+                }
+            }
+        }
     }
 
 

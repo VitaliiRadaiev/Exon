@@ -12,9 +12,21 @@
         display: inline-block;
         height: 34px;
 
+        @media (min-width: 992px) {
+            &:hover {
+                & svg path {
+                    fill: $mainColor;
+                }
+            }
+        }
+
         & svg {
             height: 100%;
             width: auto;
+
+            & path {
+                transition: all .3s ease;
+            }
         }
     }
 }

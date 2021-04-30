@@ -679,7 +679,7 @@ function inputs_init(inputs) {
 				//'+375(99)999-99-99'
 				let maskValue = input.dataset.mask;
 				input.classList.add('_mask');
-				Inputmask(maskValue, {
+				Inputmask('+7 99 999-99-99', {
 					//"placeholder": '',
 					clearIncomplete: true,
 					clearMaskOnLostFocus: true,
@@ -879,7 +879,29 @@ if(priceSlider) {
 	}
 }
 
-// == // PRICE SLIDER =====================================================;
+// == // PRICE SLIDER =====================================================
+
+
+(function checkboxHandler() {
+	let $checkboxWrap = document.querySelectorAll('.checkbox-wrap');
+	if($checkboxWrap.length) {
+		$checkboxWrap.forEach(item => {
+			let input = item.querySelector('input[type="checkbox"]');
+			if(input.checked) {
+				item.classList.add('_is-checked');
+			}
+			
+			input.addEventListener('click', () => {
+				if(input.checked) {
+					item.classList.add('_is-checked');
+				} else {
+					item.classList.remove('_is-checked');
+				}
+				
+			})
+		})
+	}
+})();;
 	let $headerMenu = document.querySelector('.header .menu');
 if($headerMenu) {
     let $burger = document.querySelector('.burger-wrap');
@@ -908,13 +930,13 @@ if($menuLinks.length) {
 if($modulesSlider) {
     let dataSlider = new Swiper($modulesSlider, {
         effect: 'flip',
-
         slidesPerView: 1,
         spaceBetween: 30,
         autoHeight: true,
         speed: 800,
     });
 };
+	;
 	//@@includ e('../common/popup/popup.js');
 	
 });
