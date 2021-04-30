@@ -6,6 +6,11 @@
         margin-bottom: 57px;
     }
 
+    @media (max-width: $md3+px) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
     &__body {
         max-width: 670px;
 

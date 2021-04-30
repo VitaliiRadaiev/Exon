@@ -13,12 +13,20 @@
 
     &__title {
         margin-bottom: 52px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 35px;
+        }
     }
 
     &__content {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        @media (max-width: $md3+px) {
+            display: block;
+        }
     }
 
     &__column {
@@ -32,6 +40,13 @@
                 padding-top: 17px;
             }
         }
+
+        @media (max-width: $md3+px) {
+            max-width: none;
+            padding-right: 0;
+            text-align: center;
+            margin-bottom: 35px;
+        }
     }
 
     &__column-1 {
@@ -44,6 +59,14 @@
 
         & .social-list {
             margin-top: 20px;
+
+            @media (min-width: 992px) {
+                display: none;
+            }
+
+            @media (max-width: $md3+px) {
+                display: none;
+            }
         }
     }
     &__column-2 {
@@ -69,8 +92,16 @@
         margin-left: auto;
         padding-right: 0;
 
-        @media (min-width: $md2+px) {
+        @media (max-width: $md2+px) {
             display: none;
+        }
+
+        @media (max-width: $md3+px) {
+            display: block;
+
+            & .social-list {
+                justify-content: center;
+            }
         }
 
         @media (min-width: 992px) {
@@ -90,6 +121,10 @@
         max-width: 122px;
         width: 100%;
         margin-bottom: 20px;
+
+        @media (max-width: $md3+px) {
+            margin: 0 auto 36px;
+        }
 
         & img {
             width: 100%;
@@ -128,6 +163,11 @@
         font-weight: 600;
         font-size: 16px;
         line-height: 150%;
+
+        @media (max-width: $md3+px) {
+            padding-top: 22px;
+            min-height: 115px;
+        }
     }
 }
 
@@ -154,14 +194,35 @@
 .default-form {
     &__item {
         margin-bottom: 55px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 23px;
+        }
     }
 
     &__group {
         display: flex;
+        align-items: center;
+
+        @media (max-width: $md3+px) {
+            flex-direction: column;
+        }
 
         & .default-form__btn {
             flex: 0 0 auto;
             margin-right: 18px;
+
+            @media (max-width: $md3+px) {
+                margin-top: 13px;
+                margin-bottom: 32px;
+                margin-right: 0;
+            }
+        }
+
+        & .checkbox-wrap {
+            @media (max-width: $md3+px) {
+                max-width: 210px;
+            }
         }
     }
 

@@ -46,7 +46,8 @@ $(document).ready(function () {
 	@@include('forms.js');
 	@@include('../common/header/header.js');
 	@@include('../common/modules/modules.js');
-	@@include('../common/FAQ/FAQ.js');
+	@@include('../common/partnership/partnership.js');
+	@@include('../common/media-logos/media-logos.js');
 	//@@includ e('../common/popup/popup.js');
 	
 });
