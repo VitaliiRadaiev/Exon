@@ -70,7 +70,7 @@
     }
 
     &__card {
-        border: 1px solid #FFFFFF;
+        border: 1px solid #ffffff;
         border-radius: 10px;
         padding: 50px 30px 50px 46px;
         min-height: 412px;
@@ -80,7 +80,7 @@
         @media (max-width: $md2+px) {
             min-height: 287px;
             border: none;
-            background: #8A89DC;
+            background: #8a89dc;
             max-width: 503px;
             padding: 50px 39px 24px 45px;
         }
@@ -89,7 +89,7 @@
             margin-bottom: 1.6em;
             line-height: 1.5em;
             & i {
-                font-family: $fontItalick;         
+                font-family: $fontItalick;
             }
         }
     }
@@ -129,7 +129,7 @@
             text-decoration: underline;
             position: relative;
             &:before {
-                font-family: 'icomoon';
+                font-family: "icomoon";
                 position: absolute;
                 content: "\e900";
                 top: 0;
@@ -148,7 +148,6 @@
             }
         }
     }
-
 
     &__img {
         width: 100%;
@@ -171,88 +170,120 @@
         }
 
         & svg {
-           width: auto;
-           height: auto;
-           max-width: 100%;
-           max-height: 100%;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
 
-           & path {
-               transition: all .6s ease;
-           }
+            & .path-wrapper {
+                transform: translateY(35px);
+            }
 
-           & [class^="module"] {
-               &.top {
-                   cursor: pointer;
-               }
-               &.letter {
-                   pointer-events: none;
-               }
-           }
+            & path {
+                transition: all 0.6s ease;
+            }
 
-           & .module-5 {
-               &.active {
+            & [class^="module"] {
+                &.top {
+                    cursor: pointer;
+                }
+                &.letter {
+                    pointer-events: none;
+                }
+
+                &.active {
                     &.top {
-                        fill: #7A78D6;
-                        stroke-width: 0;
+                        fill: #7a78d6;
+                        stroke-width: 2;
+                        stroke: #fff;
                     }
 
                     &.right {
-                        fill: #666EC5;
-                        stroke-width: 0;
+                        fill: #666ec5;
+                        stroke-width: 2;
+                        stroke: #fff;
+                    }
+                    &.left {
+                        fill: #666ec5;
+                        stroke-width: 2;
+                        stroke: #fff;
                     }
 
                     &.letter {
                         fill: #fff;
                     }
-               }
-           }
+                }
+            }
 
-           & .module-6 {
-               transform: translateY(34px) translateX(-3px);
-             
+            & .module-5 {
+                &.active {
+                    &.top {
+                        fill: #7a78d6;
+                        stroke-width: 2;
+                    }
 
-               &.scale {
-                   opacity: 0;
-               }
+                    &.right {
+                        fill: #666ec5;
+                        stroke-width: 2;
+                    }
+                    &.left {
+                        fill: #666ec5;
+                        stroke-width: 2;
+                    }
 
-               &.active {
+                    &.letter {
+                        fill: #fff;
+                    }
+                }
+            }
 
+            & .module-6 {
+                transform: translateY(34px) translateX(-3px);
+
+                &.scale {
+                    opacity: 0;
+                }
+
+                &.active {
                     &.scale {
                         opacity: 1;
+                        stroke-width: 2;
+                        stroke: #fff;
                     }
 
                     &.top {
-                        fill: #7A78D6;
-                        stroke-width: 0;
+                        fill: #7a78d6;
+                        stroke-width: 2;
                     }
 
                     &.right {
-                        fill: #666EC5;
-                        stroke-width: 0;
+                        fill: #666ec5;
+                        stroke-width: 2;
+                        margin-left: 1px;
                     }
 
                     &.letter {
                         fill: #fff;
                     }
-               }
+                }
 
-               &.letter {
-                   fill: #7A78D6;
-                   pointer-events: none;
-               }
+                &.letter {
+                    fill: #7a78d6;
+                    pointer-events: none;
+                }
 
-               &.top {
-                  fill:#DBEFFF;
-                  stroke-width: 2px;
-                  stroke: #fff;
-               }
+                &.top {
+                    fill: #dbefff;
+                    stroke-width: 2px;
+                    stroke: #fff;
+                }
 
-               &.right {
-                   fill: #84ADE3;
-                   stroke-width: 2px;
-                  stroke: #fff;
-               }
-           }
+                &.right {
+                    fill: #84ade3;
+                    stroke-width: 2px;
+                    stroke: #fff;
+                }
+            }
         }
     }
 
@@ -277,9 +308,7 @@
     }
 }
 
-
 .modules {
-
     &__mobile-list {
         @media (min-width: 768px) {
             display: none;
@@ -289,12 +318,12 @@
             border-radius: 30px;
             border: 2px solid $mainColor;
             padding: 0 28px;
-            transition: all .3s ease;
+            transition: all 0.3s ease;
             margin-bottom: 32px;
 
             &._active {
-                background: #8A89DC;
-                border-color: #8A89DC;
+                background: #8a89dc;
+                border-color: #8a89dc;
 
                 & .icon-chevron {
                     color: #fff;
@@ -318,7 +347,6 @@
         @media (max-width: $md4+px) {
             font-size: 18px;
         }
-
     }
 
     & .icon-chevron {
@@ -328,7 +356,7 @@
         transform: translateY(-50%);
         font-size: 8px;
         color: $mainColor;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
     }
 
     &__mobile-list-text {
@@ -338,14 +366,8 @@
             margin-bottom: 1.6em;
             line-height: 1.5em;
             & i {
-                font-family: $fontItalick;         
+                font-family: $fontItalick;
             }
         }
-    }
-
-    &__card-btn {
-    }
-
-    &__card-link {
     }
 }

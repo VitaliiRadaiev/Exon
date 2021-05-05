@@ -2414,7 +2414,7 @@ strong {
 }
 
 .modules__card {
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 10px;
   padding: 50px 30px 50px 46px;
   min-height: 412px;
@@ -2482,10 +2482,16 @@ strong {
   max-height: 100%;
 }
 
+.modules__img svg .path-wrapper {
+  -webkit-transform: translateY(35px);
+      -ms-transform: translateY(35px);
+          transform: translateY(35px);
+}
+
 .modules__img svg path {
-  -webkit-transition: all .6s ease;
-  -o-transition: all .6s ease;
-  transition: all .6s ease;
+  -webkit-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
 }
 
 .modules__img svg [class^="module"].top {
@@ -2496,14 +2502,41 @@ strong {
   pointer-events: none;
 }
 
+.modules__img svg [class^="module"].active.top {
+  fill: #7a78d6;
+  stroke-width: 2;
+  stroke: #fff;
+}
+
+.modules__img svg [class^="module"].active.right {
+  fill: #666ec5;
+  stroke-width: 2;
+  stroke: #fff;
+}
+
+.modules__img svg [class^="module"].active.left {
+  fill: #666ec5;
+  stroke-width: 2;
+  stroke: #fff;
+}
+
+.modules__img svg [class^="module"].active.letter {
+  fill: #fff;
+}
+
 .modules__img svg .module-5.active.top {
-  fill: #7A78D6;
-  stroke-width: 0;
+  fill: #7a78d6;
+  stroke-width: 2;
 }
 
 .modules__img svg .module-5.active.right {
-  fill: #666EC5;
-  stroke-width: 0;
+  fill: #666ec5;
+  stroke-width: 2;
+}
+
+.modules__img svg .module-5.active.left {
+  fill: #666ec5;
+  stroke-width: 2;
 }
 
 .modules__img svg .module-5.active.letter {
@@ -2522,16 +2555,19 @@ strong {
 
 .modules__img svg .module-6.active.scale {
   opacity: 1;
+  stroke-width: 2;
+  stroke: #fff;
 }
 
 .modules__img svg .module-6.active.top {
-  fill: #7A78D6;
-  stroke-width: 0;
+  fill: #7a78d6;
+  stroke-width: 2;
 }
 
 .modules__img svg .module-6.active.right {
-  fill: #666EC5;
-  stroke-width: 0;
+  fill: #666ec5;
+  stroke-width: 2;
+  margin-left: 1px;
 }
 
 .modules__img svg .module-6.active.letter {
@@ -2539,18 +2575,18 @@ strong {
 }
 
 .modules__img svg .module-6.letter {
-  fill: #7A78D6;
+  fill: #7a78d6;
   pointer-events: none;
 }
 
 .modules__img svg .module-6.top {
-  fill: #DBEFFF;
+  fill: #dbefff;
   stroke-width: 2px;
   stroke: #fff;
 }
 
 .modules__img svg .module-6.right {
-  fill: #84ADE3;
+  fill: #84ade3;
   stroke-width: 2px;
   stroke: #fff;
 }
@@ -2571,15 +2607,15 @@ strong {
   border-radius: 30px;
   border: 2px solid #25DAC5;
   padding: 0 28px;
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   margin-bottom: 32px;
 }
 
 .modules__mobile-list > li._active {
-  background: #8A89DC;
-  border-color: #8A89DC;
+  background: #8a89dc;
+  border-color: #8a89dc;
 }
 
 .modules__mobile-list > li._active .icon-chevron {
@@ -2612,9 +2648,9 @@ strong {
           transform: translateY(-50%);
   font-size: 8px;
   color: #25DAC5;
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .modules__mobile-list-text {
@@ -3610,7 +3646,7 @@ strong {
   .modules__card {
     min-height: 287px;
     border: none;
-    background: #8A89DC;
+    background: #8a89dc;
     max-width: 503px;
     padding: 50px 39px 24px 45px;
   }
@@ -3635,7 +3671,7 @@ strong {
   }
 
   .modules__card-link:before {
-    font-family: 'icomoon';
+    font-family: "icomoon";
     position: absolute;
     content: "\e900";
     top: 0;
