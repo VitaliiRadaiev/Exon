@@ -2411,6 +2411,11 @@ strong {
 
 .modules__cards-slider {
   width: 100%;
+  pointer-events: none;
+}
+
+.modules__cards-slider .swiper-slide {
+  pointer-events: none;
 }
 
 .modules__card {
@@ -2446,6 +2451,7 @@ strong {
       align-self: flex-start;
   min-width: 151px;
   margin-bottom: 27px;
+  pointer-events: auto;
 }
 
 .modules__card-btn:last-child {

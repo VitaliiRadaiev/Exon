@@ -57,6 +57,11 @@
 
     &__cards-slider {
         width: 100%;
+        pointer-events: none;
+        
+        & .swiper-slide {
+            pointer-events: none;
+        }
 
         @media (max-width: $md2+px) {
             margin-bottom: 25px;
@@ -107,7 +112,7 @@
         align-self: flex-start;
         min-width: 151px;
         margin-bottom: 27px;
-
+        pointer-events: auto;
         @media (max-width: $md2+px) {
             margin-left: auto;
             &.btn-default {
