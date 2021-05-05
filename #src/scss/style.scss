@@ -364,9 +364,25 @@ button.btn-default {
 
 // === TEXT CONTETN BLOCK ========================================================================
 .text-content {
+	font-size: 16px;
+	line-height: 1.25em;
+
 	& h1 {
+
 	}
 	& h2 {
+		font-family: $mainFontFamily;
+		font-weight: 600;
+		font-size: 36px;
+		line-height: 1.277em;
+		color: inherit;
+		margin: 0;
+		margin-bottom: 0.8em;
+	
+		@media (max-width: $md3+px) {
+			font-size: 30px;
+			line-height: 1.2em;
+		}
 	}
 	& h3 {
 	}
@@ -379,6 +395,11 @@ button.btn-default {
 	}
 
 	& p {
+		margin-bottom: 1em;
+
+		& strong {
+			font-weight: 700;
+		}
 	}
 
 	& a {
@@ -389,6 +410,20 @@ button.btn-default {
 	}
 
 	& ul {
+		& > li {
+			position: relative;
+			padding-left: 22px;
+			margin-bottom: 10px;
+			&:before {
+				position: absolute;
+				font-family: "icomoon";
+				content: "\e901";
+				top: 0px;
+				left: -2px;
+				color: $mainColor;
+				font-size: 0.6em;
+			}
+		}
 	}
 
 	& ol {
@@ -424,6 +459,7 @@ button.btn-default {
 @import "../common/FAQ/FAQ";
 @import "../common/partnership/partnership";
 @import "../common/media-logos/media-logos";
+@import "../common/hero/hero";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
@@ -431,5 +467,9 @@ button.btn-default {
 // ==== HOME =====================================================
 @import "pages/#home";
 // ==== AND HOME =====================================================
+
+// ==== MODULE PAGE =====================================================
+@import "pages/#module-page";
+// ==== AND MODULE PAGE  =====================================================
 
 // ==== AND PAGES =====================================================

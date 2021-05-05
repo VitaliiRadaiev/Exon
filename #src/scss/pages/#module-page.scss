@@ -1,0 +1,225 @@
+.module-page {
+
+}
+
+.module-page-5 {
+    & .module-info {
+        & .module-info__img {
+            @media (max-width: 1267.8px) {
+               width: 140%;
+               transform: translate(-26%, 16%);
+            }
+    
+            @media (max-width: 1076px) {
+               width: 130%;
+               transform: translate(-20%, 23%);
+            }
+    
+            @media (max-width: $md2+px) {
+                width: 100%;
+                transform: translate(0, 0);
+            }
+        }
+    }
+}
+
+
+
+.module-cards {
+    margin-bottom: 42px;
+
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @media (max-width: $md2+px) {
+            display: block;
+        }
+    }
+
+    &__item {
+        padding: 8.5px;
+        max-width: 573px;
+        flex: 0 1 50%;
+        margin-bottom: 17px;
+
+        @media (max-width: $md2+px) {
+            padding: 0;
+            margin-bottom: 28px;
+            max-width: none;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.module-card {
+    height: 100%;
+
+    &.box {
+        padding: 49px 73px 49px 64px;
+
+        @media (max-width: $md2+px) {
+            padding: 34px 20px 25px 64px;
+        }
+
+        @media (max-width: $md3+px) {
+            padding: 0;
+            background-color: transparent;
+        }
+    }
+    
+    &__title {
+        margin-bottom: 70px;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 27px;
+        }
+
+        @media (max-width: $md3+px) {
+            padding-left: 34px;
+        }
+    }
+
+    & .main-list {
+        & > li {
+            padding-left: 34px;
+            margin-bottom: 20px;
+
+            &:before {
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+
+
+.module-info {
+    margin-bottom: 60px;
+
+    @media (max-width: $md2+px) {
+        margin-bottom: 138px;
+    }
+
+    
+    @media (max-width: $md3+px) {
+        margin-bottom: 61px;
+    }
+
+    &__body {
+        display: flex;
+
+        @media (max-width: $md2+px) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__column-1 {
+        flex: 0 0 48.72%;
+        padding-right: 30px;
+
+        @media (max-width: $md2+px) {
+            flex: 0 1 100%;
+            display: flex;
+            flex-direction: column;
+            padding-right: 0;
+            padding-left: 63px;
+        }
+
+        @media (max-width: $md3+px) {
+            padding-left: 0;
+        }
+
+        & .main-list {
+            margin-bottom: 69px;
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 40px;
+            }
+
+            & li {
+                padding-left: 30px;
+
+                &:before {
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
+
+    &__column-2 {
+        flex: 1 1 auto;
+
+        @media (max-width: $md2+px) {
+            flex: 0 1 100%;
+            margin-bottom: 47px;
+        }
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__title {
+        max-width: 284px;
+        margin-bottom: 32px;
+
+        @media (max-width: $md2+px) {
+            max-width: none;
+            margin-bottom: 55px;
+        }
+
+        @media (max-width: $md3+px) {
+            padding-left: 30px;
+            margin-bottom: 18px;
+        }
+    }
+
+    &__btn {
+        margin-left: 30px;
+
+        @media (max-width: $md2+px) {
+            align-self: center;
+            margin-left: 0;
+        }
+    }
+
+    &__img {
+        width: 160%;
+        transform: translate(-33%, -1%);
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+
+        @media (max-width: 1267.8px) {
+            transform: translate(-33%, 16%);
+        }
+
+        @media (max-width: 1076px) {
+            transform: translate(-33%, 20%);
+        }
+
+        @media (max-width: $md2+px) {
+            width: 100%;
+            transform: translate(0, 0);
+
+            & picture {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
