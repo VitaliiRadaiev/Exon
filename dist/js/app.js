@@ -928,9 +928,10 @@ if($menuLinks.length) {
 };
 	let $modulesSlider = document.querySelector('.modules__cards-slider');
 let timerId;
+let dataSlider;
 
 if($modulesSlider) {
-    let dataSlider = new Swiper($modulesSlider, {
+    dataSlider = new Swiper($modulesSlider, {
         effect: 'flip',
         slidesPerView: 1,
         spaceBetween: 30,
@@ -938,6 +939,7 @@ if($modulesSlider) {
         speed: 800,
     });
 } 
+
 
 function unActiveModules(index) {
     let arrFunction = [
@@ -962,6 +964,8 @@ if(module1) {
         unActiveModules(0)
         module1Active(items)
     })
+
+    module1Active(items)
 }
 
 let module2 = document.querySelector('.module-2.trigger');
@@ -1072,6 +1076,7 @@ function module1Active(items) {
         easing: 'linear',
         duration: 100,
     })
+    dataSlider.slideTo(0);
 }
 
 function module1UnActive() {
@@ -1096,6 +1101,7 @@ function module2Active(items) {
         easing: 'linear',
         duration: 100,
     })
+    dataSlider.slideTo(1);
 }
 
 function module2UnActive() {
@@ -1120,6 +1126,14 @@ function module3Active(items) {
         easing: 'linear',
         duration: 100,
     })
+    anime({
+        targets: '.module-3._right',
+        translateY: [0, '-33px'],
+        easing: 'linear',
+        scaleX: 1.0027,
+        duration: 100,
+    })
+    dataSlider.slideTo(2);
 }
 function module3UnActive() {
     let items = document.querySelectorAll('.module-3');
@@ -1130,6 +1144,7 @@ function module3UnActive() {
             translateY: ['-34px', 0],
             easing: 'linear',
             duration: 100,
+            caleX: 1,
         })
         items.forEach(item => item.classList.remove('active'))
     }
@@ -1143,6 +1158,7 @@ function module4Active(items) {
         easing: 'linear',
         duration: 100,
     })
+    dataSlider.slideTo(3);
 }
 function module4UnActive() {
     let items = document.querySelectorAll('.module-4');
@@ -1169,7 +1185,8 @@ function module5Active(items) {
         easing: 'linear',
         duration: 100,
     })
-    items.forEach(item => item.classList.add('active'))
+    items.forEach(item => item.classList.add('active'));
+    dataSlider.slideTo(4);
 }
 
 function module5UnActive() {
@@ -1205,6 +1222,7 @@ function module6Active(items) {
         easing: 'linear',
         duration: 100,
     })
+    dataSlider.slideTo(5);
 }
 function module6UnActive() {
     let items = document.querySelectorAll('.module-6');

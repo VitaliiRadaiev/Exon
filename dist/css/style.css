@@ -2496,6 +2496,18 @@ strong {
 
 .modules__img svg [class^="module"].top {
   cursor: pointer;
+  stroke-width: 2;
+  stroke: #fff;
+}
+
+.modules__img svg [class^="module"].right {
+  stroke-width: 2;
+  stroke: #fff;
+}
+
+.modules__img svg [class^="module"].left {
+  stroke-width: 2;
+  stroke: #fff;
 }
 
 .modules__img svg [class^="module"].letter {

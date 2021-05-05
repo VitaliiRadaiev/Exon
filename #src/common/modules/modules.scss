@@ -186,10 +186,24 @@
             & [class^="module"] {
                 &.top {
                     cursor: pointer;
+                    stroke-width: 2;
+                    stroke: #fff;
                 }
+
+                &.right {
+                    stroke-width: 2;
+                    stroke: #fff;
+                }
+                &.left {
+                    stroke-width: 2;
+                    stroke: #fff;
+                }
+
                 &.letter {
                     pointer-events: none;
                 }
+
+
 
                 &.active {
                     &.top {
