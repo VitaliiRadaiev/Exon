@@ -318,41 +318,41 @@ button.btn-default {
 	width: 100%;
 	display: flex;
 	align-items: center;
-	border: 1.5px solid #EBEAED;
+	border: 1.5px solid #ebeaed;
 	border-radius: 100px;
 	padding: 10px 24px;
 	background-color: transparent;
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 26px;
-	color: #EBEAED;
+	color: #ebeaed;
 	min-height: 57px;
 
 	&::placeholder {
 		font-weight: 600;
 		font-size: 16px;
 		line-height: 26px;
-		color: #EBEAED;
+		color: #ebeaed;
 	}
 }
 
 .textarea {
 	width: 100%;
-	border: 1.5px solid #EBEAED;
+	border: 1.5px solid #ebeaed;
 	border-radius: 25px;
 	padding: 10px 24px;
 	background-color: transparent;
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 26px;
-	color: #EBEAED;
+	color: #ebeaed;
 	resize: none;
 
 	&::placeholder {
 		font-weight: 600;
 		font-size: 16px;
 		line-height: 26px;
-		color: #EBEAED;
+		color: #ebeaed;
 	}
 }
 
@@ -368,7 +368,6 @@ button.btn-default {
 	line-height: 1.25em;
 
 	& h1 {
-
 	}
 	& h2 {
 		font-family: $mainFontFamily;
@@ -378,7 +377,7 @@ button.btn-default {
 		color: inherit;
 		margin: 0;
 		margin-bottom: 0.8em;
-	
+
 		@media (max-width: $md3+px) {
 			font-size: 30px;
 			line-height: 1.2em;
@@ -395,10 +394,23 @@ button.btn-default {
 	}
 
 	& p {
-		margin-bottom: 1em;
+		margin-bottom: 1.3em;
 
 		& strong {
 			font-weight: 700;
+		}
+	}
+
+	& q {
+		margin-bottom: 1.3em;
+		display: block;
+		border: 1.5px solid #ffffff;
+		border-radius: 10px;
+		padding: 11px 28px 16px 28px;
+
+		&:before,
+		&:after {
+			display: none;
 		}
 	}
 
@@ -470,6 +482,10 @@ button.btn-default {
 
 // ==== MODULE PAGE =====================================================
 @import "pages/#module-page";
+// ==== AND MODULE PAGE  =====================================================
+
+// ==== AND MODULE PAGE  =====================================================
+@import "pages/#about";
 // ==== AND MODULE PAGE  =====================================================
 
 // ==== AND PAGES =====================================================
