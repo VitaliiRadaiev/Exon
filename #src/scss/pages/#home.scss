@@ -53,8 +53,9 @@
             margin-bottom: 13px;
         }
 
-        & span {
+        & strong, & > span {
             color: $mainColor;
+            font-weight: 600;
         }
     }
 

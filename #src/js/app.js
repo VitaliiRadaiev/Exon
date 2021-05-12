@@ -48,7 +48,7 @@ $(document).ready(function () {
 	@@include('../common/modules/modules.js');
 	@@include('../common/partnership/partnership.js');
 	@@include('../common/media-logos/media-logos.js');
-	//@@includ e('../common/popup/popup.js');
+	@@include('../common/popup/popup.js');
 	
 });
 

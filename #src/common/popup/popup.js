@@ -1,6 +1,6 @@
 // ==== Popup form handler====
 
-const popupLinks = document.querySelectorAll('.popup-link');
+const popupLinks = document.querySelectorAll('.anchor');
 const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll('.lock-padding');
 

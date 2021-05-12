@@ -136,8 +136,8 @@ spollerInit()
 
 
 
-if($('.anchor').length>0) {
-	$(".anchor").click(function() {
+if($('._scroll-to').length>0) {
+	$("._scroll-to").click(function() {
 	  var elementClick = $(this).attr("href").match(/#\w+$/gi).join(''); 
 	  var destination = $(elementClick).offset().top - 70;
 	  jQuery("html:not(:animated),body:not(:animated)").animate({

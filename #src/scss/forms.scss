@@ -221,7 +221,7 @@
 
 // //<CHECK (chk+tab)>====================================================================================================
 .checkbox-wrap {
-    & input[type="checkbox"] {
+    & input[type="checkbox"], & .checkbox, & br {
         display: none;
     }
 

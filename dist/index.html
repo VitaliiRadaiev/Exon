@@ -80,7 +80,7 @@
             </div>
         </nav>
         <a href="#" class="header__btn-signin btn-default" data-da="menu__mobile-btn-group,first,991.8">Войти</a>
-        <a href="#" class="header__btn-feedback btn-default btn-default_solid" data-da="menu__mobile-btn-group,last,991.8">Обратная связь</a>
+        <a href="#formPopup" class="header__btn-feedback btn-default btn-default_solid anchor" data-da="menu__mobile-btn-group,last,991.8">Обратная связь</a>
         <div class="header__burger">
             <div class="burger-wrap">
                 <div class="burger">
@@ -136,7 +136,7 @@
 							</div>
 
 						</div>
-						<a href="#" class="promo-header__btn btn-default">Заказать презентацию</a>
+						<a href="#formPopup" class="promo-header__btn btn-default anchor">Заказать презентацию</a>
 					</div>
 					<div class="promo-header__column-2">
 						<div class="promo-header__img" data-da="promo-header__column-1,1,767.8">
@@ -308,25 +308,24 @@
 						</ul>
 						<div class="modules__cards-slider swiper-container">
 							<div class="swiper-wrapper">
-
-								<!-- 1 -->
-								<div class="swiper-slide">
+								<!-- 6 -->
+								<div class="swiper-slide" data-id="1">
 									<div class="modules__card">
 										<h3 class="modules__card-title title-1">
-											Exon.Конструктор
+											Exon.Стройконтроль
 										</h3>
-
 										<p>
-											Модуль — конструктор бизнес-процессов связывает задачи в единый процесс
+											Модуль для контроля качества строительных работ
 										</p>
 										<p>
-											<i>позволяет выбирать последовательность шагов и назначать исполнителей.</i>
+											<i> позволяет формировать замечания/предписания и устранять их в единой
+												среде.</i>
 										</p>
 										<a href="#" class="modules__card-btn btn-default">Подробнее</a>
 									</div>
 								</div>
 								<!-- 2 -->
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-id="2">
 									<div class="modules__card">
 										<h3 class="modules__card-title title-1">
 											Exon.Аналитика
@@ -361,7 +360,7 @@
 									</div>
 								</div>
 								<!-- 3 -->
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-id="3">
 									<div class="modules__card">
 										<h3 class="modules__card-title title-1">
 											Exon.ИТД
@@ -376,8 +375,24 @@
 										<a href="#" class="modules__card-btn btn-default">Подробнее</a>
 									</div>
 								</div>
+								<!-- 1 -->
+								<div class="swiper-slide" data-id="4">
+									<div class="modules__card">
+										<h3 class="modules__card-title title-1">
+											Exon.Конструктор
+										</h3>
+
+										<p>
+											Модуль — конструктор бизнес-процессов связывает задачи в единый процесс
+										</p>
+										<p>
+											<i>позволяет выбирать последовательность шагов и назначать исполнителей.</i>
+										</p>
+										<a href="#" class="modules__card-btn btn-default">Подробнее</a>
+									</div>
+								</div>
 								<!-- 4 -->
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-id="5">
 									<div class="modules__card">
 										<h3 class="modules__card-title title-1">
 											Exon.ПИР
@@ -394,7 +409,7 @@
 									</div>
 								</div>
 								<!-- 5 -->
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-id="6">
 									<div class="modules__card">
 										<h3 class="modules__card-title title-1">
 											Exon.Планер
@@ -410,24 +425,6 @@
 										<a href="#" class="modules__card-btn btn-default">Подробнее</a>
 									</div>
 								</div>
-								<!-- 6 -->
-								<div class="swiper-slide">
-									<div class="modules__card">
-										<h3 class="modules__card-title title-1">
-											Exon.Стройконтроль
-										</h3>
-										<p>
-											Модуль для контроля качества строительных работ
-										</p>
-										<p>
-											<i> позволяет формировать замечания/предписания и устранять их в единой
-												среде.</i>
-										</p>
-										<a href="#" class="modules__card-btn btn-default">Подробнее</a>
-									</div>
-								</div>
-
-
 							</div>
 						</div>
 					</div>
@@ -494,12 +491,12 @@
 										d="M303.134 128.849L312.751 122.32L315.298 124.181L311.876 126.486L319.838 132.29L317.049 134.173L309.102 128.388L305.68 130.692L303.134 128.849Z"
 										fill="#7A78D6" />
 
-									<path class="module-3 left"
+									<path class="module-3 left _left"
 										d="M349 166.583L436.987 220.211V339.823L349 283.339V166.583Z" fill="#666EC5" />
-									<path class="module-3 right"
+									<path class="module-3 right _right2"
 										d="M436.987 339.823V220.211L609.452 111.032L609.55 224.037L436.987 339.823Z"
 										fill="#4F58B8" />
-									<path class="module-3 left"
+									<path class="module-3 left _left2"
 										d="M521.579 166.583L610 221.292L609.55 339.823L521.579 283.339V166.583Z"
 										fill="#666EC5" />
 									<path class="module-3 top trigger"
@@ -623,7 +620,9 @@
 									<path class="module-4 letter"
 										d="M495.084 226.356L498.015 224.338L506.142 230.208L504.216 220.119L506.353 218.67L520.001 228.539L517.055 230.556L508.846 224.613L510.757 234.849L508.733 236.243L495.084 226.356Z"
 										fill="#7A78D6" />
-									<path class="module-5 right"
+										<path class="module-6 left2"
+										d="M350 354.06L350 391.42L438.677 450.92V413.473L350 354.06Z" fill="#666EC5" />
+										<path class="module-5 right"
 										d="M435.5 333.933C435.505 333.562 435.304 333.218 434.977 333.041C434.651 332.864 434.253 332.882 433.944 333.089L347.944 390.589C347.665 390.775 347.499 391.089 347.5 391.424C347.501 391.759 347.671 392.072 347.951 392.256L432.451 447.756C432.756 447.956 433.146 447.974 433.469 447.803C433.792 447.632 433.995 447.298 434 446.933L435.5 333.933Z"
 										fill="#BAD4F5" stroke="white" stroke-width="2" stroke-linejoin="round" />
 									<path class="module-5 top trigger"
@@ -733,6 +732,7 @@
 										fill="#F6F5FF" />
 									<path class="module-6 scale left"
 										d="M350 354.06L350 391.42L438.677 450.92V413.473L350 354.06Z" fill="#666EC5" />
+
 								</g>
 							</svg>
 						</div>
@@ -1031,12 +1031,12 @@
                     <input autocomplete="off" type="email" class="input" placeholder="Ваш email">
                 </div>
                 <div class="default-form__item">
-                    <input autocomplete="off" type="text" class="input _mask" placeholder="+7 99 123-45-67">
+                    <input autocomplete="off" type="text" class="input _mask" placeholder="+7 999 123-45-67">
                 </div>
                 <div class="default-form__group">
                     <button class="default-form__btn btn-default btn-default_solid" type="submit">Получить доступ</button>
                     <div class="checkbox-wrap">
-                        <input class="checkbox" type="checkbox" id="iAccept" name="" checked>
+                        <input class="checkbox" type="checkbox" name="" checked>
                         <label class="checkbox-wrap__label" for="iAccept">Согласие на обработку персональных данных</label>
                     </div>
                 </div>
@@ -1151,6 +1151,33 @@
     </div>
 </footer>
 	<!-- == // FOOTER ================== -->
+	<div class="popup" id="formPopup">
+	<div class="popup_body">
+		<div class="popup_content">
+			<div class="popup_close close-popup"><span></span></div>
+			<form action="#" class="popup-form default-form">
+                <div class="default-form__item">
+                    <input autocomplete="off" type="text" class="input" placeholder="Ваше имя">
+                </div>
+                <div class="default-form__item">
+                    <input autocomplete="off" type="email" class="input" placeholder="Ваш email">
+                </div>
+                <div class="default-form__item">
+                    <input autocomplete="off" type="text" class="input _mask" placeholder="+7 999 123-45-67">
+                </div>
+                <div class="default-form__group">
+                    <button class="default-form__btn btn-default btn-default_solid" type="submit">Получить доступ</button>
+                    <div class="checkbox-wrap">
+                        <input class="checkbox" type="checkbox" name="" checked>
+                        <label class="checkbox-wrap__label" for="iAccept3">Согласие на обработку персональных данных</label>
+                    </div>
+                </div>
+            </form>
+			
+		</div>
+	</div>
+</div>
+
 	
 <script src="js/vendors.js"></script>
 <script src="js/app.js"></script>

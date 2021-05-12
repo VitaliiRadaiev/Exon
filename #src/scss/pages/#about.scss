@@ -3,7 +3,7 @@
 }
 
 .hero-v2 {
-    margin-bottom: 77px;
+    margin-bottom: 47px;
 
     @media (max-width: $md2+px) {
         margin-bottom: 45px;
@@ -21,7 +21,7 @@
     }
 
     &__row-2 {
-        margin-top: -107px;
+        margin-top: -74px;
         margin-left: -14px;
         pointer-events: none;
 
@@ -35,7 +35,7 @@
     }
 
     &__column-1 {
-        flex: 0 0 46.98%;
+        flex: 0 0 47.98%;
         padding-right: 30px;
         padding-top: 21px;
 
@@ -45,6 +45,9 @@
     }
 
     &__column-2 {
+        @media (min-width: 992px) {
+            padding-top: 26px;
+        }
         @media (max-width: $md2+px) {
             display: flex;
             flex-direction: column;
@@ -61,8 +64,9 @@
             margin-bottom: 20px;
         }
 
-        & > span {
+        & > span, & strong {
             color: $mainColor;
+            font-weight: 600;
         }
     }
 

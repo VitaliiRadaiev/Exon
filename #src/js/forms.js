@@ -303,7 +303,7 @@ function inputs_init(inputs) {
 				//'+375(99)999-99-99'
 				let maskValue = input.dataset.mask;
 				input.classList.add('_mask');
-				Inputmask('+7 99 999-99-99', {
+				Inputmask('+7 999 999-99-99', {
 					//"placeholder": '',
 					clearIncomplete: true,
 					clearMaskOnLostFocus: true,
@@ -509,8 +509,11 @@ if(priceSlider) {
 (function checkboxHandler() {
 	let $checkboxWrap = document.querySelectorAll('.checkbox-wrap');
 	if($checkboxWrap.length) {
-		$checkboxWrap.forEach(item => {
+		$checkboxWrap.forEach((item, index) => {
 			let input = item.querySelector('input[type="checkbox"]');
+			item.querySelector('.checkbox-wrap__label').setAttribute('for', `_form${index}`)
+			input.id = `_form${index}`;
+			
 			if(input.checked) {
 				item.classList.add('_is-checked');
 			}

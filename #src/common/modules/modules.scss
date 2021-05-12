@@ -58,9 +58,16 @@
     &__cards-slider {
         width: 100%;
         pointer-events: none;
+        padding-bottom: 2px;
         
         & .swiper-slide {
             pointer-events: none;
+            opacity: 0 !important;
+
+            &.swiper-slide-active {
+                opacity: 1 !important;
+                z-index: 10;
+            }
         }
 
         @media (max-width: $md2+px) {
@@ -90,11 +97,51 @@
             padding: 50px 39px 24px 45px;
         }
 
+        & *:last-child {
+            margin-bottom: 0;
+        }
+
         & p {
             margin-bottom: 1.6em;
             line-height: 1.5em;
             & i {
                 font-family: $fontItalick;
+            }
+        }
+
+        & .wp-block-button {
+            margin-bottom: 27px;
+
+            & .wp-block-button__link {
+                display: inline-flex;
+                min-height: 60px;
+                justify-content: center;
+                align-items: center;
+                border: 2px solid $mainColor;
+                border-radius: 999px;
+                min-width: 118px;
+                padding: 8px 19px;
+                color: $textColor !important;
+                transition: all 0.3s ease;
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 16px;
+                white-space: nowrap;
+                pointer-events: auto;
+
+                @media (min-width: 992px) {
+                    &:hover {
+                        background-color: $mainColor;
+                    }
+                }
+
+                @media (max-width: $md2+px) {
+                    margin-left: auto;
+                    &.btn-default {
+                        min-width: 178px;
+                        min-height: 43px;
+                    }
+                }
             }
         }
     }
@@ -113,6 +160,12 @@
         min-width: 151px;
         margin-bottom: 27px;
         pointer-events: auto;
+        
+        @media (min-width: 992px) {
+            &:hover {
+                background: $mainColor;
+            }
+        }
         @media (max-width: $md2+px) {
             margin-left: auto;
             &.btn-default {
@@ -307,6 +360,13 @@
                 &.left {
                     fill: #BAD4F5 !important;
                 }
+
+                &.left2 {
+                    fill: #BAD4F5 !important;
+                 
+                    stroke-width: 2px;
+                    stroke: #fff;
+                }
             }
         }
     }
@@ -386,11 +446,50 @@
     &__mobile-list-text {
         display: none;
         padding-bottom: 15px;
+        & *:last-child {
+            margin-bottom: 0;
+        }
         & p {
             margin-bottom: 1.6em;
             line-height: 1.5em;
             & i {
                 font-family: $fontItalick;
+            }
+        }
+
+        & .wp-block-button {
+            margin-bottom: 27px;
+
+            & .wp-block-button__link {
+                display: inline-flex;
+                min-height: 43px;
+                justify-content: center;
+                align-items: center;
+                border: 2px solid $mainColor;
+                border-radius: 999px;
+                min-width: 118px;
+                padding: 8px 19px;
+                color: $textColor !important;
+                transition: all 0.3s ease;
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 16px;
+                white-space: nowrap;
+                pointer-events: auto;
+
+                @media (min-width: 992px) {
+                    &:hover {
+                        background-color: $mainColor;
+                    }
+                }
+
+                @media (max-width: $md2+px) {
+                    margin-left: auto;
+                    &.btn-default {
+                        min-width: 178px;
+                        min-height: 43px;
+                    }
+                }
             }
         }
     }

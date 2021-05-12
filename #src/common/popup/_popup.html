@@ -1,17 +1,25 @@
-<div class="popup" id="popupSerch">
+<div class="popup" id="formPopup">
 	<div class="popup_body">
 		<div class="popup_content">
-
-			<div class="popup__form-wrap">
-				<form action="/" class="popup-search">
-					<div class="popup-search__item">
-						<input class="popup-search__input" type="text" placeholder="SEARCH HERE…">
-					</div>
-					<div class="popup-search__item">
-						<button class="popup-search__submit" type="submit"><span>SUBMIT</span></button>
-					</div>
-				</form>
-			</div>
+			<div class="popup_close close-popup"><span></span></div>
+			<form action="#" class="popup-form default-form">
+                <div class="default-form__item">
+                    <input autocomplete="off" type="text" class="input" placeholder="Ваше имя">
+                </div>
+                <div class="default-form__item">
+                    <input autocomplete="off" type="email" class="input" placeholder="Ваш email">
+                </div>
+                <div class="default-form__item">
+                    <input autocomplete="off" type="text" class="input _mask" placeholder="+7 999 123-45-67">
+                </div>
+                <div class="default-form__group">
+                    <button class="default-form__btn btn-default btn-default_solid" type="submit">Получить доступ</button>
+                    <div class="checkbox-wrap">
+                        <input class="checkbox" type="checkbox" name="" checked>
+                        <label class="checkbox-wrap__label" for="iAccept3">Согласие на обработку персональных данных</label>
+                    </div>
+                </div>
+            </form>
 			
 		</div>
 	</div>

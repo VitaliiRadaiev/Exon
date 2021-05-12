@@ -192,6 +192,9 @@
 }
 
 .default-form {
+    & .ajax-loader {
+        display: none;
+    }
     &__item {
         margin-bottom: 55px;
 

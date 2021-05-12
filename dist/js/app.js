@@ -179,8 +179,8 @@ spollerInit()
 
 
 
-if($('.anchor').length>0) {
-	$(".anchor").click(function() {
+if($('._scroll-to').length>0) {
+	$("._scroll-to").click(function() {
 	  var elementClick = $(this).attr("href").match(/#\w+$/gi).join(''); 
 	  var destination = $(elementClick).offset().top - 70;
 	  jQuery("html:not(:animated),body:not(:animated)").animate({
@@ -679,7 +679,7 @@ function inputs_init(inputs) {
 				//'+375(99)999-99-99'
 				let maskValue = input.dataset.mask;
 				input.classList.add('_mask');
-				Inputmask('+7 99 999-99-99', {
+				Inputmask('+7 999 999-99-99', {
 					//"placeholder": '',
 					clearIncomplete: true,
 					clearMaskOnLostFocus: true,
@@ -885,8 +885,11 @@ if(priceSlider) {
 (function checkboxHandler() {
 	let $checkboxWrap = document.querySelectorAll('.checkbox-wrap');
 	if($checkboxWrap.length) {
-		$checkboxWrap.forEach(item => {
+		$checkboxWrap.forEach((item, index) => {
 			let input = item.querySelector('input[type="checkbox"]');
+			item.querySelector('.checkbox-wrap__label').setAttribute('for', `_form${index}`)
+			input.id = `_form${index}`;
+			
 			if(input.checked) {
 				item.classList.add('_is-checked');
 			}
@@ -931,8 +934,37 @@ let timerId;
 let dataSlider;
 
 if($modulesSlider) {
+    let wrapper = $modulesSlider.querySelector('.swiper-wrapper');
+    let items = Array.from(wrapper.children);
+    items.forEach(item => {
+        let id = item.dataset.id;
+        switch (+id) {
+            case 1:
+                item.dataset.id = 5
+                break;
+            case 2:
+                item.dataset.id = 1
+                break;
+            case 3:
+                item.dataset.id = 2
+                break;
+            case 4:
+                item.dataset.id = 0
+                break;
+            case 5:
+                item.dataset.id = 3
+                break;
+            case 6:
+                item.dataset.id = 4
+                break;
+        }
+    })
+
+    let sortItems = items.sort((a, b) => a.dataset.id - b.dataset.id);
+    wrapper.append(...sortItems);
+
     dataSlider = new Swiper($modulesSlider, {
-        effect: 'flip',
+        effect: 'fade',
         slidesPerView: 1,
         spaceBetween: 30,
         autoHeight: true,
@@ -1127,10 +1159,55 @@ function module3Active(items) {
         duration: 100,
     })
     anime({
-        targets: '.module-3._right',
-        translateY: [0, '-33px'],
+        targets: '.module-3.top',
+        translateY: [0, '-30px'],
+        translateX: [0, '16px'],
+        scaleX: {
+            value: 0.97,
+            duration: 0
+        },
+        scaleY: {
+            value: 0.98,
+            duration: 0,
+        },
+        rotate: '-0.28deg',
         easing: 'linear',
-        scaleX: 1.0027,
+        duration: 100,
+    })
+    anime({
+        targets: '.module-3._right',
+        translateY: [0, '-32px'],
+        translateX: [0, '14px'],
+        skewX: '-2deg',
+        skewY: '-0.3deg',
+        scaleX: 0.986,
+        easing: 'linear',
+        duration: 100,
+    })
+    anime({
+        targets: '.module-3._right2',
+        translateY: [0, '-34px'],
+        translateX: [0, '17px'],
+        scaleX: 0.97,
+        easing: 'linear',
+        duration: 100,
+    })
+    anime({
+        targets: '.module-3._left',
+        translateY: [0, '-34px'],
+        translateX: {
+            value: ['-2px', '4px'],
+            duration: 0,
+        } ,
+        easing: 'linear',
+        duration: 100,
+    })
+    anime({
+        targets: '.module-3._left2',
+        translateY: [0, '-34px'],
+        translateX: [0, '6px'],
+        skewX: '-2deg',
+        easing: 'linear',
         duration: 100,
     })
     dataSlider.slideTo(2);
@@ -1145,6 +1222,61 @@ function module3UnActive() {
             easing: 'linear',
             duration: 100,
             caleX: 1,
+        })
+        anime({
+            targets: '.module-3.top',
+            translateY: ['-30px', 0],
+            translateX: ['16px', 0],
+            scaleX: {
+                value: 1,
+                duration: 0,
+            },
+            scaleY: {
+                value: 1,
+                duration: 0,
+            },
+            rotate: {
+                value: 0,
+                duration: 0,
+            },
+            easing: 'linear',
+            duration: 100,
+        })
+        anime({
+            targets: '.module-3._right',
+            translateY: ['-32px', 0],
+            translateX: ['14px', 0],
+            skewX: 0,
+            skewY: 0,
+            scaleX: 1,
+            easing: 'linear',
+            duration: 100,
+        })
+        anime({
+            targets: '.module-3._right2',
+            translateY: ['-34px', 0],
+            translateX: ['17px', 0],
+            scaleX: 1,
+            easing: 'linear',
+            duration: 100,
+        })
+        anime({
+            targets: '.module-3._left',
+            translateY: ['-34px', 0],
+            translateX: {
+                value: ['4px', '-1.5px', 0],
+                duration: 0,
+            },
+            easing: 'linear',
+            duration: 100,
+        })
+        anime({
+            targets: '.module-3._left2',
+            translateY: ['-34px', 0],
+            translateX: ['6px', 0],
+            skewX: 0,
+            easing: 'linear',
+            duration: 100,
         })
         items.forEach(item => item.classList.remove('active'))
     }
@@ -1222,6 +1354,13 @@ function module6Active(items) {
         easing: 'linear',
         duration: 100,
     })
+    anime({
+        targets: '.module-6.left2',
+        translateY: ['112px', '80px'],
+        translateX: '-5px',
+        easing: 'linear',
+        duration: 100,
+    })
     dataSlider.slideTo(5);
 }
 function module6UnActive() {
@@ -1235,6 +1374,14 @@ function module6UnActive() {
             easing: 'linear',
             translateX: '-3px',
             scale: 1,
+            duration: 100,
+        })
+
+        anime({
+            targets: '.module-6.left2',
+            translateY: ['80px', '112px'],
+            translateX: '-5px',
+            easing: 'linear',
             duration: 100,
         })
     }
@@ -1322,7 +1469,149 @@ function module6UnActive() {
 	}
 
 };
-	//@@includ e('../common/popup/popup.js');
+	// ==== Popup form handler====
+
+const popupLinks = document.querySelectorAll('.anchor');
+const body = document.querySelector('body');
+const lockPadding = document.querySelectorAll('.lock-padding');
+
+let unlock = true;
+
+const timeout = 800;
+
+if(popupLinks.length > 0) {
+	for (let index = 0; index < popupLinks.length; index++) {
+		const popupLink = popupLinks[index];
+		popupLink.addEventListener('click', function(e) {
+			const popupName = popupLink.getAttribute('href').replace('#', '');
+			const curentPopup = document.getElementById(popupName);
+			popupOpen(curentPopup);
+			e.preventDefault();
+		});
+	}
+}
+
+
+const popupCloseIcon = document.querySelectorAll('.close-popup');
+if(popupCloseIcon.length > 0) {
+	for(let index = 0; index < popupCloseIcon.length; index++) {
+		const el = popupCloseIcon[index];
+		el.addEventListener('click', function(e) {
+			popupClose(el.closest('.popup'));
+			e.preventDefault();
+		});
+	}
+}
+
+function popupOpen(curentPopup) {
+	if(curentPopup && unlock) {
+		const popupActive = document.querySelector('.popup.open');
+		if (popupActive) {
+			popupClose(popupActive, false);
+		} else {
+			bodyLock();
+		}
+		curentPopup.classList.add('open');
+		curentPopup.addEventListener('click', function(e) {
+			if(!e.target.closest('.popup_content')) {
+				popupClose(e.target.closest('.popup'));
+			}
+		});
+
+	}
+}
+
+function popupClose(popupActive, doUnlock = true) {
+	if(unlock) {
+		popupActive.classList.remove('open');
+		if(doUnlock) {
+			bodyUnlock();
+		}
+	}
+}
+
+function bodyLock() {
+	const lockPaddingValue = window.innerWidth - document.querySelector('body').offsetWidth + 'px';
+	let targetPadding = document.querySelectorAll('._lp');
+	if(targetPadding.length) {
+		for (let index = 0; index < targetPadding.length; index++) {
+			const el = targetPadding[index];
+			el.style.paddingRight = lockPaddingValue;
+		}
+	}
+
+	if(lockPadding.length > 0) {
+		for (let index = 0; index < lockPadding.length; index++) {
+			const el = lockPadding[index];
+			el.style.paddingRight = lockPaddingValue;
+		}
+	}
+
+	body.style.paddingRight = lockPaddingValue;
+	body.classList.add('lock');
+
+	unlock = false;
+	setTimeout(function() {
+		unlock = true;
+	}, timeout);
+}
+
+function bodyUnlock() {
+	let targetPadding = document.querySelectorAll('._lp');
+
+	setTimeout(function() {
+		if(targetPadding.length) {
+			for (let index = 0; index < targetPadding.length; index++) {
+				const el = targetPadding[index];
+				el.style.paddingRight = '0px';
+			}
+		}
+
+		for( let index = 0; index < lockPadding.length; index++) {
+			const el = lockPadding[index];
+			el.style.paddingRight = '0px';
+		}
+
+		body.style.paddingRight = '0px';
+		body.classList.remove('lock');
+	}, timeout);
+
+	unlock = false;
+	setTimeout(function() { 
+		unlock = true;
+	}, timeout);
+}
+
+document.addEventListener('keydown', function(e) {
+	if(e.which === 27) {
+		const popupActive = document.querySelector('.popup.open');
+		popupClose(popupActive);
+	}
+});
+
+// === Polyfill ===
+	(function() {
+		if(!Element.prototype.closest) {
+			Element.prototype.closest = function(css) {
+				var node = this;
+				while(node) {
+					if(node.matches(css)) return node;
+					else node == node.parentElement;
+				}
+				return null;
+			};
+		}
+	})();
+
+	(function() {
+		if(!Element.prototype.matches) {
+			Element.prototype.matches = Element.prototype.matchesSelector ||
+				Element.prototype.webkitMatchesSelector ||
+				Element.prototype.mozMatchesSelector ||
+				Element.prototype.mozMatchesSelector;
+		}
+	})();
+// === AND Polyfill ===;
 	
 });
 

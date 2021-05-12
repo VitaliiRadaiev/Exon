@@ -3,8 +3,37 @@ let timerId;
 let dataSlider;
 
 if($modulesSlider) {
+    let wrapper = $modulesSlider.querySelector('.swiper-wrapper');
+    let items = Array.from(wrapper.children);
+    items.forEach(item => {
+        let id = item.dataset.id;
+        switch (+id) {
+            case 1:
+                item.dataset.id = 5
+                break;
+            case 2:
+                item.dataset.id = 1
+                break;
+            case 3:
+                item.dataset.id = 2
+                break;
+            case 4:
+                item.dataset.id = 0
+                break;
+            case 5:
+                item.dataset.id = 3
+                break;
+            case 6:
+                item.dataset.id = 4
+                break;
+        }
+    })
+
+    let sortItems = items.sort((a, b) => a.dataset.id - b.dataset.id);
+    wrapper.append(...sortItems);
+
     dataSlider = new Swiper($modulesSlider, {
-        effect: 'flip',
+        effect: 'fade',
         slidesPerView: 1,
         spaceBetween: 30,
         autoHeight: true,
@@ -199,10 +228,55 @@ function module3Active(items) {
         duration: 100,
     })
     anime({
-        targets: '.module-3._right',
-        translateY: [0, '-33px'],
+        targets: '.module-3.top',
+        translateY: [0, '-30px'],
+        translateX: [0, '16px'],
+        scaleX: {
+            value: 0.97,
+            duration: 0
+        },
+        scaleY: {
+            value: 0.98,
+            duration: 0,
+        },
+        rotate: '-0.28deg',
         easing: 'linear',
-        scaleX: 1.0027,
+        duration: 100,
+    })
+    anime({
+        targets: '.module-3._right',
+        translateY: [0, '-32px'],
+        translateX: [0, '14px'],
+        skewX: '-2deg',
+        skewY: '-0.3deg',
+        scaleX: 0.986,
+        easing: 'linear',
+        duration: 100,
+    })
+    anime({
+        targets: '.module-3._right2',
+        translateY: [0, '-34px'],
+        translateX: [0, '17px'],
+        scaleX: 0.97,
+        easing: 'linear',
+        duration: 100,
+    })
+    anime({
+        targets: '.module-3._left',
+        translateY: [0, '-34px'],
+        translateX: {
+            value: ['-2px', '4px'],
+            duration: 0,
+        } ,
+        easing: 'linear',
+        duration: 100,
+    })
+    anime({
+        targets: '.module-3._left2',
+        translateY: [0, '-34px'],
+        translateX: [0, '6px'],
+        skewX: '-2deg',
+        easing: 'linear',
         duration: 100,
     })
     dataSlider.slideTo(2);
@@ -217,6 +291,61 @@ function module3UnActive() {
             easing: 'linear',
             duration: 100,
             caleX: 1,
+        })
+        anime({
+            targets: '.module-3.top',
+            translateY: ['-30px', 0],
+            translateX: ['16px', 0],
+            scaleX: {
+                value: 1,
+                duration: 0,
+            },
+            scaleY: {
+                value: 1,
+                duration: 0,
+            },
+            rotate: {
+                value: 0,
+                duration: 0,
+            },
+            easing: 'linear',
+            duration: 100,
+        })
+        anime({
+            targets: '.module-3._right',
+            translateY: ['-32px', 0],
+            translateX: ['14px', 0],
+            skewX: 0,
+            skewY: 0,
+            scaleX: 1,
+            easing: 'linear',
+            duration: 100,
+        })
+        anime({
+            targets: '.module-3._right2',
+            translateY: ['-34px', 0],
+            translateX: ['17px', 0],
+            scaleX: 1,
+            easing: 'linear',
+            duration: 100,
+        })
+        anime({
+            targets: '.module-3._left',
+            translateY: ['-34px', 0],
+            translateX: {
+                value: ['4px', '-1.5px', 0],
+                duration: 0,
+            },
+            easing: 'linear',
+            duration: 100,
+        })
+        anime({
+            targets: '.module-3._left2',
+            translateY: ['-34px', 0],
+            translateX: ['6px', 0],
+            skewX: 0,
+            easing: 'linear',
+            duration: 100,
         })
         items.forEach(item => item.classList.remove('active'))
     }
@@ -294,6 +423,13 @@ function module6Active(items) {
         easing: 'linear',
         duration: 100,
     })
+    anime({
+        targets: '.module-6.left2',
+        translateY: ['112px', '80px'],
+        translateX: '-5px',
+        easing: 'linear',
+        duration: 100,
+    })
     dataSlider.slideTo(5);
 }
 function module6UnActive() {
@@ -307,6 +443,14 @@ function module6UnActive() {
             easing: 'linear',
             translateX: '-3px',
             scale: 1,
+            duration: 100,
+        })
+
+        anime({
+            targets: '.module-6.left2',
+            translateY: ['80px', '112px'],
+            translateX: '-5px',
+            easing: 'linear',
             duration: 100,
         })
     }
